@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F089F9BC21E8BCA4005D0D16 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = F089F9BB21E8BCA4005D0D16 /* test.txt */; };
+		F089F9BF21E8DE10005D0D16 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089F9BE21E8DE10005D0D16 /* Commands.swift */; };
+		F089F9C021E8DE5B005D0D16 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089F9BE21E8DE10005D0D16 /* Commands.swift */; };
 		F08CE61221E8AC6600425ACA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE61121E8AC6600425ACA /* main.swift */; };
 		F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */; };
 		F08CE62821E8B1D500425ACA /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62721E8B1D500425ACA /* FileReader.swift */; };
@@ -28,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		F089F9BB21E8BCA4005D0D16 /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		F089F9BE21E8DE10005D0D16 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		F08CE60E21E8AC6600425ACA /* RedBadger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RedBadger; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08CE61121E8AC6600425ACA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBadgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +65,14 @@
 			path = "Test Fixtures";
 			sourceTree = "<group>";
 		};
+		F089F9BD21E8DBFD005D0D16 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F089F9BE21E8DE10005D0D16 /* Commands.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F08CE60521E8AC6600425ACA = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +94,7 @@
 		F08CE61021E8AC6600425ACA /* RedBadger */ = {
 			isa = PBXGroup;
 			children = (
+				F089F9BD21E8DBFD005D0D16 /* Models */,
 				F08CE62621E8B1A100425ACA /* FileReader */,
 				F08CE61121E8AC6600425ACA /* main.swift */,
 			);
@@ -198,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08CE62821E8B1D500425ACA /* FileReader.swift in Sources */,
+				F089F9BF21E8DE10005D0D16 /* Commands.swift in Sources */,
 				F08CE61221E8AC6600425ACA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08CE62921E8B36100425ACA /* FileReader.swift in Sources */,
+				F089F9C021E8DE5B005D0D16 /* Commands.swift in Sources */,
 				F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

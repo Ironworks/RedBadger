@@ -10,40 +10,6 @@
 
 import Foundation
 
-enum Orientation {
-    case north
-    case east
-    case south
-    case west
-    
-    static func orientation(from string: String) -> Orientation {
-        
-        switch string {
-        case "N":
-            return Orientation.north
-        case "E":
-            return Orientation.east
-        case "S":
-            return Orientation.south
-        case "W":
-            return Orientation.west
-        default:
-            return Orientation.north
-        }
-    }
-}
-
-struct RobotCommand {
-    let startPoint: CGPoint
-    let startOrientation: Orientation
-    let moves: [String]
-}
-
-struct Commands {
-    let gridSize: CGPoint
-    let robotCommands: [RobotCommand]
-}
-
 class FileReader {
     
     let fileName: String
@@ -68,26 +34,34 @@ class FileReader {
         let gridString = String(commandsArray![0])
         let grid = point(from: gridString)
         
+        let commands = robotCommands(from: commandsArray!)
+        
+        return Commands(gridSize: grid, robotCommands: commands)
+        
+    }
+    
+    private func robotCommands(from commandArray: [Substring]) -> [RobotCommand] {
         var robotCommands: [RobotCommand] = []
         var directions: [String]
         var startPoint = CGPoint(x: 0, y: 0)
         var startOrientation = Orientation.north
-        for i in 1...(commandsArray?.count)! - 1 {
-
+        for i in 1...(commandArray.count) - 1 {
+            
             if i % 2 == 0 {
                 //Even so must be directions
-                directions = String(commandsArray![i]).map { String ($0) }
-                let robotCommand = RobotCommand(startPoint: startPoint, startOrientation: startOrientation, moves: directions)
+                directions = String(commandArray[i]).map { String ($0) }
+                let robotCommand = RobotCommand(startPoint: startPoint,
+                                                startOrientation: startOrientation,
+                                                moves: directions)
                 robotCommands.append(robotCommand)
             } else {
-                let s = String(commandsArray![i]).split(separator: " ")
+                let s = String(commandArray[i]).split(separator: " ")
                 startPoint = point(from: s[0] + " " + s[1])
                 startOrientation = Orientation.orientation(from: String(s[2]))
             }
         }
         
-        return Commands(gridSize: grid, robotCommands: robotCommands)
-        
+        return robotCommands
     }
     
     private func point(from string: String) -> CGPoint {
@@ -102,6 +76,5 @@ class FileReader {
         return CGPoint(x: x, y: y)
         
     }
-    
 
 }
