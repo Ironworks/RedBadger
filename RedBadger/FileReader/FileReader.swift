@@ -10,6 +10,12 @@
 
 import Foundation
 
+enum FileReaderErrors: Error {
+    case fileNotFound
+    case unableToReadFile
+    case emptyFile
+}
+
 class FileReader {
     
     let fileName: String
@@ -20,21 +26,30 @@ class FileReader {
         self.fileType = type
     }
     
-    func readFile() -> Commands? {
+    func readFile() throws -> Commands  {
         let bundle  = Bundle(for: type(of: self))
+        var commandString: String
         
         
         guard let url = bundle.url(forResource: fileName, withExtension: fileType) else {
-            return nil
+            throw FileReaderErrors.fileNotFound
         }
         
-        let commandString = try? String(contentsOf: url)
-        let commandsArray = commandString?.split(separator: "\n")
+        do {
+            commandString = try String(contentsOf: url)
+        } catch {
+            throw FileReaderErrors.unableToReadFile
+        }
+
+        let commandsArray = commandString.split(separator: "\n")
+        if commandsArray.count == 0 {
+            throw FileReaderErrors.emptyFile
+        }
         
-        let gridString = String(commandsArray![0])
+        let gridString = String(commandsArray[0])
         let grid = point(from: gridString)
         
-        let commands = robotCommands(from: commandsArray!)
+        let commands = robotCommands(from: commandsArray)
         
         return Commands(gridSize: grid, robotCommands: commands)
         
