@@ -25,10 +25,19 @@
 /* Begin PBXFileReference section */
 		F08CE60E21E8AC6600425ACA /* RedBadger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RedBadger; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08CE61121E8AC6600425ACA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBadgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08CE62021E8ADDE00425ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F08CE60B21E8AC6600425ACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08CE61921E8ADDE00425ACA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				F08CE61021E8AC6600425ACA /* RedBadger */,
+				F08CE61D21E8ADDE00425ACA /* RedBadgerTests */,
 				F08CE60F21E8AC6600425ACA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				F08CE60E21E8AC6600425ACA /* RedBadger */,
+				F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +71,14 @@
 				F08CE61121E8AC6600425ACA /* main.swift */,
 			);
 			path = RedBadger;
+			sourceTree = "<group>";
+		};
+		F08CE61D21E8ADDE00425ACA /* RedBadgerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F08CE62021E8ADDE00425ACA /* Info.plist */,
+			);
+			path = RedBadgerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +101,23 @@
 			productReference = F08CE60E21E8AC6600425ACA /* RedBadger */;
 			productType = "com.apple.product-type.tool";
 		};
+		F08CE61B21E8ADDE00425ACA /* RedBadgerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F08CE62121E8ADDE00425ACA /* Build configuration list for PBXNativeTarget "RedBadgerTests" */;
+			buildPhases = (
+				F08CE61821E8ADDE00425ACA /* Sources */,
+				F08CE61921E8ADDE00425ACA /* Frameworks */,
+				F08CE61A21E8ADDE00425ACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedBadgerTests;
+			productName = RedBadgerTests;
+			productReference = F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +129,9 @@
 				ORGANIZATIONNAME = IronworksMediaLimited;
 				TargetAttributes = {
 					F08CE60D21E8AC6600425ACA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F08CE61B21E8ADDE00425ACA = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -110,9 +149,20 @@
 			projectRoot = "";
 			targets = (
 				F08CE60D21E8AC6600425ACA /* RedBadger */,
+				F08CE61B21E8ADDE00425ACA /* RedBadgerTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F08CE61A21E8ADDE00425ACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F08CE60A21E8AC6600425ACA /* Sources */ = {
@@ -120,6 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08CE61221E8AC6600425ACA /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08CE61821E8ADDE00425ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +316,40 @@
 			};
 			name = Release;
 		};
+		F08CE62221E8ADDE00425ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RedBadgerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.RedBadgerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		F08CE62321E8ADDE00425ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RedBadgerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.RedBadgerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +367,15 @@
 			buildConfigurations = (
 				F08CE61621E8AC6600425ACA /* Debug */,
 				F08CE61721E8AC6600425ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F08CE62121E8ADDE00425ACA /* Build configuration list for PBXNativeTarget "RedBadgerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F08CE62221E8ADDE00425ACA /* Debug */,
+				F08CE62321E8ADDE00425ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
