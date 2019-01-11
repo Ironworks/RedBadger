@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F08CE61221E8AC6600425ACA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE61121E8AC6600425ACA /* main.swift */; };
+		F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		F08CE61121E8AC6600425ACA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBadgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08CE62021E8ADDE00425ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				F08CE62021E8ADDE00425ACA /* Info.plist */,
+				F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */,
 			);
 			path = RedBadgerTests;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 					};
 					F08CE61B21E8ADDE00425ACA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -177,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +324,7 @@
 		F08CE62221E8ADDE00425ACA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = RedBadgerTests/Info.plist;
@@ -329,6 +335,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.RedBadgerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -336,6 +343,7 @@
 		F08CE62321E8ADDE00425ACA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = RedBadgerTests/Info.plist;
