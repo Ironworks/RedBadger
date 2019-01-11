@@ -53,5 +53,14 @@ class MarsTests: XCTestCase {
         sut.setRobotLost(at: CGPoint(x: 3, y: 3))
         XCTAssertFalse(sut.grid[3][3].robotLost, "Should not set robot lost if location is not at the edge of the grid")
     }
-
+    
+    func testRobotLostForLocation () {
+        sut.setRobotLost(at: CGPoint(x: 5, y: 3))
+        XCTAssertTrue(sut.robotLost(at: CGPoint(x: 5, y: 3)), "Should return true")
+    }
+    
+    func testRobotNotLostForLocation () {
+        XCTAssertFalse(sut.robotLost(at: CGPoint(x: 5, y: 3)), "Should return false")
+    }
+    
 }

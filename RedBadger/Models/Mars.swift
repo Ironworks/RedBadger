@@ -11,6 +11,7 @@ import Foundation
 protocol Planet {
     func locationExists(at point: CGPoint) -> Bool
     func setRobotLost(at point: CGPoint)
+    func robotLost(at point: CGPoint) -> Bool
 }
 
 class Mars: Planet {
@@ -50,6 +51,14 @@ class Mars: Planet {
                point.x <= topRight.x &&
                point.y >= 0 &&
                point.y <= topRight.y
+    }
+    
+    func robotLost(at point: CGPoint) -> Bool {
+        if locationExists(at: point) {
+            return grid[Int(point.x)][Int(point.y)].robotLost
+        }
+        
+        return false
     }
     
     private func locationIsEdge(at point: CGPoint) -> Bool {
