@@ -11,6 +11,7 @@
 		F089F9BF21E8DE10005D0D16 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089F9BE21E8DE10005D0D16 /* Commands.swift */; };
 		F089F9C021E8DE5B005D0D16 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089F9BE21E8DE10005D0D16 /* Commands.swift */; };
 		F089F9C221E8E3E3005D0D16 /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = F089F9C121E8E3E3005D0D16 /* empty.txt */; };
+		F089F9C621E8EBA7005D0D16 /* MarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089F9C521E8EBA7005D0D16 /* MarsTests.swift */; };
 		F08CE61221E8AC6600425ACA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE61121E8AC6600425ACA /* main.swift */; };
 		F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */; };
 		F08CE62821E8B1D500425ACA /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62721E8B1D500425ACA /* FileReader.swift */; };
@@ -33,6 +34,7 @@
 		F089F9BB21E8BCA4005D0D16 /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		F089F9BE21E8DE10005D0D16 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		F089F9C121E8E3E3005D0D16 /* empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
+		F089F9C521E8EBA7005D0D16 /* MarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsTests.swift; sourceTree = "<group>"; };
 		F08CE60E21E8AC6600425ACA /* RedBadger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RedBadger; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08CE61121E8AC6600425ACA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBadgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 				F089F9BA21E8BC80005D0D16 /* Test Fixtures */,
 				F08CE62021E8ADDE00425ACA /* Info.plist */,
 				F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */,
+				F089F9C521E8EBA7005D0D16 /* MarsTests.swift */,
 			);
 			path = RedBadgerTests;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F089F9C621E8EBA7005D0D16 /* MarsTests.swift in Sources */,
 				F08CE62921E8B36100425ACA /* FileReader.swift in Sources */,
 				F089F9C021E8DE5B005D0D16 /* Commands.swift in Sources */,
 				F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */,
