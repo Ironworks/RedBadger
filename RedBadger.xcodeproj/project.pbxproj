@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F08CE61221E8AC6600425ACA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE61121E8AC6600425ACA /* main.swift */; };
 		F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */; };
+		F08CE62821E8B1D500425ACA /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62721E8B1D500425ACA /* FileReader.swift */; };
+		F08CE62921E8B36100425ACA /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CE62721E8B1D500425ACA /* FileReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,7 @@
 		F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBadgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08CE62021E8ADDE00425ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
+		F08CE62721E8B1D500425ACA /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		F08CE61021E8AC6600425ACA /* RedBadger */ = {
 			isa = PBXGroup;
 			children = (
+				F08CE62621E8B1A100425ACA /* FileReader */,
 				F08CE61121E8AC6600425ACA /* main.swift */,
 			);
 			path = RedBadger;
@@ -82,6 +86,14 @@
 				F08CE62421E8AFDC00425ACA /* FileReaderTests.swift */,
 			);
 			path = RedBadgerTests;
+			sourceTree = "<group>";
+		};
+		F08CE62621E8B1A100425ACA /* FileReader */ = {
+			isa = PBXGroup;
+			children = (
+				F08CE62721E8B1D500425ACA /* FileReader.swift */,
+			);
+			path = FileReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08CE62821E8B1D500425ACA /* FileReader.swift in Sources */,
 				F08CE61221E8AC6600425ACA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08CE62921E8B36100425ACA /* FileReader.swift in Sources */,
 				F08CE62521E8AFDC00425ACA /* FileReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
