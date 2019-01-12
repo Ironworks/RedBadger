@@ -133,6 +133,7 @@ class RobotTests: XCTestCase {
         XCTAssertTrue(sut.lost, "Should set lost to true")
         XCTAssertTrue(mockPlanet.setRobotLostCalled, "Should call set robot to lost")
         XCTAssertTrue(mockPlanet.robotLost, "Should set robot lost to true")
+        XCTAssert(mockPlanet.lostPoint == sut.position, "Should set the plant location to lost")
     }
     
     func testInstructionNotExecutedIfRobotPreviouslyLost() {
@@ -170,6 +171,8 @@ class MockPlanet: Planet {
     
     var setRobotLostCalled = false
     
+    var lostPoint: CGPoint = CGPoint()
+    
     func locationExists(at point: CGPoint) -> Bool {
         locationExistsCalled = true
         return locationExists
@@ -178,6 +181,7 @@ class MockPlanet: Planet {
     func setRobotLost(at point: CGPoint) {
         setRobotLostCalled = true
         robotLost = true
+        lostPoint = point
     }
     
     func robotLost(at point: CGPoint) -> Bool {

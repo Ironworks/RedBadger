@@ -112,9 +112,9 @@ class Robot: RobotActions {
         
         if planet.locationExists(at: newPosition) {
             position = newPosition
-        } else if !planet.robotLost(at: newPosition) {
+        } else if !planet.robotLost(at: position) {
             lost = true
-            planet.setRobotLost(at: newPosition)
+            planet.setRobotLost(at: position)
         }
         
     }
