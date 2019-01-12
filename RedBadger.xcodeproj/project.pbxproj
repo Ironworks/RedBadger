@@ -43,6 +43,7 @@
 		F089F9C721E8ECBF005D0D16 /* Mars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars.swift; sourceTree = "<group>"; };
 		F089F9CA21E902C9005D0D16 /* RobotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotTests.swift; sourceTree = "<group>"; };
 		F089F9CC21E903E7005D0D16 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		F089F9D021E96640005D0D16 /* Input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Input.txt; sourceTree = "<group>"; };
 		F08CE60E21E8AC6600425ACA /* RedBadger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RedBadger; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08CE61121E8AC6600425ACA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F08CE61C21E8ADDE00425ACA /* RedBadgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBadgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +89,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F089F9CF21E96624005D0D16 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				F089F9D021E96640005D0D16 /* Input.txt */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		F08CE60521E8AC6600425ACA = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +118,7 @@
 		F08CE61021E8AC6600425ACA /* RedBadger */ = {
 			isa = PBXGroup;
 			children = (
+				F089F9CF21E96624005D0D16 /* Input */,
 				F089F9BD21E8DBFD005D0D16 /* Models */,
 				F08CE62621E8B1A100425ACA /* FileReader */,
 				F08CE61121E8AC6600425ACA /* main.swift */,
