@@ -29,6 +29,19 @@ enum Orientation {
             return Orientation.north
         }
     }
+    
+    func identifierForOrientation() -> String {
+        switch self {
+        case .north:
+            return "N"
+        case .east:
+            return "E"
+        case .south:
+            return "S"
+        case .west:
+            return "W"
+        }
+    }
 }
 
 struct RobotCommand {

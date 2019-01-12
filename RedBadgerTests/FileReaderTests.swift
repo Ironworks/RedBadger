@@ -23,7 +23,7 @@ class FileReaderTests: XCTestCase {
         sut = nil
     }
 
-    func testCanCreateFileReader () {
+    func testCanCreateFileReader() {
         XCTAssertNotNil(sut, "Should be able to create FileReader")
     }
     
@@ -92,7 +92,7 @@ class FileReaderTests: XCTestCase {
         }
     }
     
-    func testEmptyFile () {
+    func testEmptyFile() {
         sut = FileReader(fileName: "empty", type: "txt")
         do {
             _ = try sut.readFile()

@@ -36,30 +36,30 @@ class MarsTests: XCTestCase {
         }
     }
     
-    func testLocationExists () {
+    func testLocationExists() {
         XCTAssertTrue(sut.locationExists(at: CGPoint(x: 3, y: 3)), "Should return true for a valid location")
     }
     
-    func testLocationOutOfBounds () {
+    func testLocationOutOfBounds() {
         XCTAssertFalse(sut.locationExists(at: CGPoint(x: 7, y: 7)), "Should return false for a valid location")
     }
     
-    func testCanSetRobotLostAtValidLocation () {
+    func testCanSetRobotLostAtValidLocatio() {
         sut.setRobotLost(at: CGPoint(x: 5, y: 3))
         XCTAssertTrue(sut.grid[5][3].robotLost, "Should set robot lost to true")
     }
     
-    func testCantSetRobotLostIfNotAtEdgeOfPlanet () {
+    func testCantSetRobotLostIfNotAtEdgeOfPlanet() {
         sut.setRobotLost(at: CGPoint(x: 3, y: 3))
         XCTAssertFalse(sut.grid[3][3].robotLost, "Should not set robot lost if location is not at the edge of the grid")
     }
     
-    func testRobotLostForLocation () {
+    func testRobotLostForLocation() {
         sut.setRobotLost(at: CGPoint(x: 5, y: 3))
         XCTAssertTrue(sut.robotLost(at: CGPoint(x: 5, y: 3)), "Should return true")
     }
     
-    func testRobotNotLostForLocation () {
+    func testRobotNotLostForLocation() {
         XCTAssertFalse(sut.robotLost(at: CGPoint(x: 5, y: 3)), "Should return false")
     }
     
